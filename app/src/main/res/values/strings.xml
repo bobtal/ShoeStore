@@ -5,4 +5,11 @@
     <string name="password_text">Enter your password:</string>
     <string name="login_text">Login</string>
     <string name="create_acc_text">Sign Up</string>
+
+    <!-- Strings related to WelcomeFragment -->
+    <string name="welcome_heading">WELCOME!</string>
+    <string name="welcome_text">Welcome to our Shoe Store! We hope you\'ll have a pleasant stay around here.
+    Tap the button to go to the next screen to see the instructions.</string>
+    <string name="to_instructions">To instructions</string>
+
 </resources>
