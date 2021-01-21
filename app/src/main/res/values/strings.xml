@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- Strings related to loginFragment -->
+    <string name="email_text">Enter your e-mail:</string>
+    <string name="password_text">Enter your password:</string>
+    <string name="login_text">Login</string>
+    <string name="create_acc_text">Sign Up</string>
 </resources>
