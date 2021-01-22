@@ -1,23 +1,30 @@
 <resources>
     <string name="app_name">ShoeStore</string>
     <!-- Strings related to loginFragment -->
+    <string name="login_title">Login</string>
     <string name="email_text">Enter your e-mail:</string>
     <string name="password_text">Enter your password:</string>
     <string name="login_text">Login</string>
     <string name="create_acc_text">Sign Up</string>
 
     <!-- Strings related to WelcomeFragment -->
+    <string name="welcome_title">Welcome</string>
     <string name="welcome_heading">WELCOME!</string>
     <string name="welcome_text">Welcome to our Shoe Store! We hope you\'ll have a pleasant stay around here.
     Tap the button to go to the next screen to see the instructions.</string>
     <string name="to_instructions">To instructions</string>
 
     <!-- Strings related to InstructionsFragment -->
+    <string name="instructions_title">Instructions</string>
     <string name="instructions_heading">Instructions!</string>
     <string name="instructions_text">You should go to the shoe list!</string>
     <string name="to_shoe_list">To Shoe List</string>
 
+    <!-- Strings related to ShoeListFragment -->
+    <string name="shoe_list_title">Shoe List</string>
+
     <!-- Strings related to ShoeDetailFragment -->
+    <string name="shoe_detail_title">Shoe Detail</string>
     <string name="shoe_name">Shoe Name:</string>
     <string name="company">Company:</string>
     <string name="shoe_size">Shoe Size:</string>
