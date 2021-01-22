@@ -17,4 +17,12 @@
     <string name="instructions_text">You should go to the shoe list!</string>
     <string name="to_shoe_list">To Shoe List</string>
 
+    <!-- Strings related to ShoeDetailFragment -->
+    <string name="shoe_name">Shoe Name:</string>
+    <string name="company">Company:</string>
+    <string name="shoe_size">Shoe Size:</string>
+    <string name="description">Description:</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
 </resources>
