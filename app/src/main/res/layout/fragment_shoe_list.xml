@@ -3,6 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ShoeListFragment">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <ScrollView
         android:id="@+id/shoe_list_scroll"
         android:layout_width="match_parent"
@@ -12,10 +16,22 @@
             android:id="@+id/shoe_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
             android:orientation="vertical">
 
         </LinearLayout>
 
-
     </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_plus"
+        android:contentDescription="@string/add_shoe"
+        android:layout_margin="16dp" />
+
+    </FrameLayout>
+
 </layout>
