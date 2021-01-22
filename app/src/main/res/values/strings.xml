@@ -32,4 +32,7 @@
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
 
+    <!-- Strings related to logout_menu -->
+    <string name="logout">Log out</string>
+
 </resources>
