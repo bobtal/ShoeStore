@@ -14,6 +14,8 @@
             type="com.udacity.shoestore.viewmodel.ShoeListViewModel" />
     </data>
 
+<!--    Using ConstraintLayout due to ease of use and ability to "splt" the editing
+        part to the top and buttons to the bottom, and also alinging baselines-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

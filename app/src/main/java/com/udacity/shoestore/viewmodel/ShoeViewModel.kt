@@ -3,6 +3,8 @@ package com.udacity.shoestore.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation
+import com.udacity.shoestore.R
 import com.udacity.shoestore.models.Shoe
 
 class ShoeViewModel : ViewModel() {

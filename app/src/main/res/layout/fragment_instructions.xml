@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+<!--    Using a RelativeLayout since may need to add additional views and could use the relative positioning
+        but don't expect a lot more views so no need for ConstraintLayout-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
