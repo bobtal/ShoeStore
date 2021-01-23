@@ -10,7 +10,8 @@
     <ScrollView
         android:id="@+id/shoe_list_scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize">
 
         <LinearLayout
             android:id="@+id/shoe_list"
