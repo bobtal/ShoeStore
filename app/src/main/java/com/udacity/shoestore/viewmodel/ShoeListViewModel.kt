@@ -13,22 +13,9 @@ class ShoeListViewModel : ViewModel() {
     val shoesListLiveData: LiveData<List<Shoe>>
         get() = _shoesListLiveData
 
-    private val _eventShoeAdded = MutableLiveData<Boolean>()
-    val eventShoeAdded: LiveData<Boolean>
-        get() = _eventShoeAdded
-
     fun addShoe(shoe: Shoe) {
         shoesList.add(shoe)
         _shoesListLiveData.value = shoesList
-        _eventShoeAdded.value = true
-    }
-
-    fun viewAdded() {
-        _eventShoeAdded.value = false
-    }
-
-    init {
-        _eventShoeAdded.value = false
     }
 
 
