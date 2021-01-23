@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
@@ -34,14 +35,18 @@ class ShoeDetailFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_shoeDetailFragment_to_shoeListFragment))
 
         binding.saveButton.setOnClickListener { view ->
-            val newShoe = Shoe(
-                binding.shoeNameEdit.text.toString(),
-                binding.shoeSizeEdit.text.toString().toDouble(),
-                binding.companyEdit.text.toString(),
-                binding.descriptionEdit.text.toString()
-            )
-            viewModel.addShoe(newShoe)
-            findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+            if (binding.shoeSizeEdit.text.isEmpty()) {
+                Toast.makeText(this.context, "Shoe size cannot be empty" ,Toast.LENGTH_SHORT).show()
+            } else {
+                val newShoe = Shoe(
+                    binding.shoeNameEdit.text.toString(),
+                    binding.shoeSizeEdit.text.toString().toDouble(),
+                    binding.companyEdit.text.toString(),
+                    binding.descriptionEdit.text.toString()
+                )
+                viewModel.addShoe(newShoe)
+                findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+            }
         }
 
         return binding.root
