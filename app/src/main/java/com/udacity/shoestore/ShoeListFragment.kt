@@ -71,6 +71,7 @@ class ShoeListFragment : Fragment() {
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
+        newShoeTextView.textSize = 32.0f
         newShoeTextView.text = getString(R.string.shoe_listing_format, shoe.name, shoe.company, shoe.size, shoe.description)
         binding.shoeList.addView(newShoeTextView)
     }
