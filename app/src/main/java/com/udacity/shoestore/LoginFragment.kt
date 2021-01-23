@@ -22,8 +22,7 @@ class LoginFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(
-            inflater, R.layout.fragment_login, container, false
-        )
+            inflater, R.layout.fragment_login, container, false)
 
         // create a single onClickListener to be used by both buttons since
         // destination is the same

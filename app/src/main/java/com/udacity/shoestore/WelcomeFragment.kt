@@ -22,7 +22,7 @@ class WelcomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding : FragmentWelcomeBinding = DataBindingUtil.inflate(
+        val binding: FragmentWelcomeBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_welcome, container, false)
 
         // setup the onClickListener for the button for navigation

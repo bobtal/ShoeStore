@@ -22,7 +22,7 @@ class InstructionsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val binding : FragmentInstructionsBinding = DataBindingUtil.inflate(
+        val binding: FragmentInstructionsBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_instructions, container, false)
 
         binding.toShoeListButton.setOnClickListener(

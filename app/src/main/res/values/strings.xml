@@ -24,6 +24,7 @@
     <string name="shoe_list_title">Shoe List</string>
     <string name="no_shoes">No shoes yet, click the button to add some…</string>
     <string name="add_shoe">add_shoe</string>
+    <string name="shoe_listing_format">%s from %s. Size: %.1f. %s</string>
 
     <!-- Strings related to ShoeDetailFragment -->
     <string name="shoe_detail_title">Shoe Detail</string>
