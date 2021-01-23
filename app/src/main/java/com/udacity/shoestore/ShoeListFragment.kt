@@ -13,6 +13,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
+import com.udacity.shoestore.databinding.ShoeLayoutBinding
 import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.viewmodel.ShoeListViewModel
 
@@ -65,15 +66,23 @@ class ShoeListFragment : Fragment() {
     }
 
     private fun addView(shoe: Shoe) {
-        val newShoeTextView = TextView(this.context)
-        newShoeTextView.layoutParams =
-            LinearLayout.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-        newShoeTextView.textSize = 32.0f
-        newShoeTextView.text = getString(R.string.shoe_listing_format, shoe.name, shoe.company, shoe.size, shoe.description)
-        binding.shoeList.addView(newShoeTextView)
+        // Using DataBinding to inflate each TextView with shoe information instead
+        // of the commented code below, which also works. But this is way more awesome! :)
+        // Thanks to the Anonymous Udacity reviewer for pointing this possibility!
+        val shoeLayoutBinding : ShoeLayoutBinding = DataBindingUtil.inflate(
+            layoutInflater, R.layout.shoe_layout, null, false)
+        shoeLayoutBinding.shoe = shoe
+        binding.shoeList.addView(shoeLayoutBinding.root)
+
+//        val newShoeTextView = TextView(this.context)
+//        newShoeTextView.layoutParams =
+//            LinearLayout.LayoutParams(
+//                ViewGroup.LayoutParams.WRAP_CONTENT,
+//                ViewGroup.LayoutParams.WRAP_CONTENT
+//            )
+//        newShoeTextView.textSize = 32.0f
+//        newShoeTextView.text = getString(R.string.shoe_listing_format, shoe.name, shoe.company, shoe.size, shoe.description)
+//        binding.shoeList.addView(newShoeTextView)
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
