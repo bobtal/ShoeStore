@@ -22,7 +22,7 @@ import com.udacity.shoestore.viewmodel.ShoeViewModel
 class ShoeDetailFragment : Fragment() {
 
     private val viewModel: ShoeListViewModel by activityViewModels()
-    private val shoeViewModel: ShoeViewModel by viewModels()
+    private val shoeDetailsViewModel: ShoeViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,18 +31,20 @@ class ShoeDetailFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding = FragmentShoeDetailBinding.inflate(inflater, container, false)
 
-        // linking the shoeViewModel to the binding
-        binding.shoeViewModel = shoeViewModel
+        // Kotlinizing - using the scope function with
+        with(binding){
+            shoeViewModel = shoeDetailsViewModel
 
-        binding.cancelButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_shoeDetailFragment_to_shoeListFragment))
+            cancelButton.setOnClickListener(
+                Navigation.createNavigateOnClickListener(R.id.action_shoeDetailFragment_to_shoeListFragment))
 
-        binding.saveButton.setOnClickListener { view ->
-            if (binding.shoeSizeEdit.text.isEmpty()) {
-                Toast.makeText(this.context, "Shoe size cannot be empty", Toast.LENGTH_SHORT).show()
-            } else {
-                viewModel.addShoe(shoeViewModel.shoeLiveData.value!!)
-                findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+            saveButton.setOnClickListener { view ->
+                if (shoeSizeEdit.text.isEmpty()) {
+                    Toast.makeText(requireContext(), "Shoe size cannot be empty" ,Toast.LENGTH_SHORT).show()
+                } else {
+                    viewModel.addShoe(shoeDetailsViewModel.shoeLiveData.value!!)
+                    findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
+                }
             }
         }
 
