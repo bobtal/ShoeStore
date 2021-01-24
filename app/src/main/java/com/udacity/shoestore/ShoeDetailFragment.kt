@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
@@ -23,7 +22,7 @@ import com.udacity.shoestore.viewmodel.ShoeViewModel
 class ShoeDetailFragment : Fragment() {
 
     private val viewModel: ShoeListViewModel by activityViewModels()
-    private lateinit var shoeViewModel: ShoeViewModel
+    private val shoeViewModel: ShoeViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +32,6 @@ class ShoeDetailFragment : Fragment() {
         val binding = FragmentShoeDetailBinding.inflate(inflater, container, false)
 
         // linking the shoeViewModel to the binding
-        shoeViewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
         binding.shoeViewModel = shoeViewModel
 
         binding.cancelButton.setOnClickListener(
@@ -41,7 +39,7 @@ class ShoeDetailFragment : Fragment() {
 
         binding.saveButton.setOnClickListener { view ->
             if (binding.shoeSizeEdit.text.isEmpty()) {
-                Toast.makeText(this.context, "Shoe size cannot be empty" ,Toast.LENGTH_SHORT).show()
+                Toast.makeText(this.context, "Shoe size cannot be empty", Toast.LENGTH_SHORT).show()
             } else {
                 viewModel.addShoe(shoeViewModel.shoeLiveData.value!!)
                 findNavController().navigate(R.id.action_shoeDetailFragment_to_shoeListFragment)
