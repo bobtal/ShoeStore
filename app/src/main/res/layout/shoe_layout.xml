@@ -12,6 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@{@string/shoe_listing_format(shoe.name, shoe.company, shoe.size, shoe.description)}"
-        android:textSize="32sp" />
+        android:textSize="@dimen/large_text_size" />
 
 </layout>
